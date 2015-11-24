@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html ng-app="MyApp">
+<head>
+	<link rel="stylesheet" href="bootstrap/bootstrap.min.css" type="text/css">
+
+	<title>AngularJs .get method</title>
+	<!-- Bootstrap Core CSS -->   
+</head>
+<body>
+	<div class="container" ng-controller="AppCtrl">
+	<h1>typicode.com</h1>
+
+	<table class="table">
+	<input type="text" placeholder="Type to filter results" ng-model="filtered"/>
+		<thead>
+			<tr>
+				<th>id</th>
+				<th>Name</th>
+				<th>Email</th>
+				<th>Body</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr ng-repeat="post in posts | filter: filtered">
+				<td>{{post.id}}</td>
+				<td>{{post.name}}</td>
+				<td>{{post.email}}</td>
+				<td>{{post.body}}</td>
+			</tr>
+		</tbody>
+	</table>
+	
+<!--Angular script link-->
+<script src="controller/angular.min.js"></script>
+<!--Angular controller file-->
+<script src="controller/controller.js"></script>
+</body>
+</html>
