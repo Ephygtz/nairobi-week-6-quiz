@@ -2,18 +2,22 @@
 var express = require('express');
 var app = express();
 
+//create an array
+var contact = [];
 
 
 app.post('/save-number', function(req, res) {
 
-    save-number = {
-        name: 'My Name',
-        phone_number: 45872698,
-        occupation: 'Full Stacker'
-    };
-    
-     var contact = [save-number];
- });
+  var object = {};
+
+  object.name = name;
+  object.number = phone_number;
+  object.occupation = occupation;
+
+  contact.push(object);
+  res.redirect('/');
+
+});
 
 
 app.get('/', function(req, res) {
